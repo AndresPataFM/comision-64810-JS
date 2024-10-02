@@ -8,9 +8,10 @@ Tips:
 🔹 Utiliza la consola para ayudarte a encontrar los errores o fallas que provocan que el código no funcione.
 */
 
-const numero = 123
-const hilo = "hola"
-const booleano = false
+
+const numero = 4;
+const hilo = "asd";
+const booleano = false;
 
 console.log(numero)
 console.log(hilo)
