@@ -44,7 +44,7 @@ false //falso
 // 🔶 Lógica 🔶
 /* 
 🔹 AND && (Y lógico)
-Compara la veracidad de 2 valores y si ambos son verdaderos, retorna verdadero. Intenta retornar el valor falso.
+Compara la veracidad de 2 valores y si ambos son verdaderos, retorna el valor verdadero. Intenta retornar el valor falso.
 
 a && b
 

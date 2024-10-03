@@ -110,25 +110,25 @@ Un Switch es una manera avanzada de hacer un else if con un else al final en la 
     default: sería el caso equivalente al else final de un else if
 
 switch(elemento){
-    // if(elemento === condición1){
+    // if(elemento === dato1){
     //     // código 1
     // }
-    case condición1:
-        //estrictamente igual al condición 1
+    case dato1:
+        //estrictamente igual al dato 1
         // código 1
         break ➡️ opcional
-    case condición2:
+    case dato2:
         // código 2
         break ➡️ opcional
     ...
-    case condiciónFinal:
+    case datoFinal:
         // código Final
         break ➡️ opcional
     default:
         // equivalente a un else
         // código que se ejecuta si el resto es falso o si el caso anterior no tiene break
 }
-En el caso que un condición sea verdadero, se ejecuta el código de este hasta frenarse con un break, en el caso en el que ningún condición sea falso, 
+En el caso que un condición (datoN === elemento) sea verdadero, se ejecuta el código de este hasta frenarse con un break, en el caso en el que ningúna condición sea verdadera, ejecuta el default (y si no hay default, no ahce nada). 
 
 */
 // 🔸 Ejemplos 🔸
