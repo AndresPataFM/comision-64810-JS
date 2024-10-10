@@ -185,7 +185,7 @@ function calcularMundiales(){
   const anioActual = 2024 
   const totalDeMundiales = 21;
   const edad = pedirEdad()
-  const edadUtil = edad - (anioActual-anioUltimoMundial)
+  const edadUtil = edad - (anioActual-anioUltimoMundial) + 4
   if(edadUtil/4>=totalDeMundiales){
     alert("viviste aproximadametne 21 mundiales")
   } else {
