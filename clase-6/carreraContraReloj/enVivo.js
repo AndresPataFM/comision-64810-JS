@@ -1,63 +1,63 @@
-//  nombre, el precio, los ingredientes y el número de combo de la hamburguesa
-//  JS una clase con el nombre Hamburguesa
-//  "nombre", "precio","ingredientes" y "número de combo"
+/* 
+
+Crear en JS una clase con el nombre hamburguesa
+En su constructor define "nombre", "precio","ingredientes" y "número de combo"
+
+("Krusty Burger", 150.00, ['Carne', 'Queso'], 1)
+("Krusty Burger Doble", 225.00, ['Carne', 'Queso', 'Panceta'], 2)
+("Krusty Pollo", 150.00, ['Pollo', 'Queso'], 3)
+("Krusty Mega balde de Pollo", 140.00, ['Pollo', 'Queso',
+'Aderezo'], 4)
+("Super Krusty", 150.00, ['Carne', 'Queso', 'huevo'], 5)
+("Super Krusty Doble", 180.00, ['Carne', 'Queso', 'huevo'], 6)
+("Super Krusty Triple", 205.00, ['Carne', 'Queso', 'huevo'], 7)
+("Krusty Vegan", 125.00, ['Espinaca', 'Soja'], 8)
+
+Almacena las instancias de la clase en un array de objetosllamado 'hamburguesas', utilizando el método push().
+Ten presente que el precio debe ser un valor numérico y puede contener decimales (2). El número de combo también es numérico y debe ser un número entero. Por último, los ingredientes de cada hamburguesa deben estar contenidos en un array de elementos.
+
+*/
+
+const hamburguesas = []
+
 class Hamburguesa{
   constructor(nombre, precio, ingredientes, nroCombo){
     this.nombre = nombre
     this.precio = precio
     this.ingredientes = ingredientes
-    this.numeroDeCombo = nroCombo
+    this.nroCombo = nroCombo
+    hamburguesas.push(this)
   }
 }
 
-function agregarHamburguesa(nombre, precio, ingredientes, nroCombo){
-  hamburguesas.push(new Hamburguesa(nombre, precio, ingredientes, nroCombo))
-}
-const hamburguesas = []
-
-agregarHamburguesa("Krusty Burger", 150.00, ['Carne', 'Queso'], 1)
-agregarHamburguesa("Krusty Burger Doble", 225.00, ['Carne', 'Queso', 'Panceta'], 2)
-agregarHamburguesa("Krusty Pollo", 150.00, ['Pollo', 'Queso'], 3)
-agregarHamburguesa("Krusty Mega balde de Pollo", 140.00, ['Pollo', 'Queso','Aderezo'], 4)
-agregarHamburguesa("Super Krusty", 150.00, ['Carne', 'Queso', 'huevo'], 5)
-agregarHamburguesa("Super Krusty Doble", 180.00, ['Carne', 'Queso', 'huevo'], 6)
-agregarHamburguesa("Super Krusty Triple", 205.00, ['Carne', 'Queso', 'huevo'], 7)
-agregarHamburguesa("Krusty Vegan", 125.00, ['Espinaca', 'Soja'], 8)
+new Hamburguesa("Krusty Burger", 150.00, ['Carne', 'Queso'], 1)
+new Hamburguesa("Krusty Burger Doble", 225.00, ['Carne', 'Queso', 'Panceta'], 2)
+new Hamburguesa("Krusty Pollo", 150.00, ['Pollo', 'Queso'], 3)
+new Hamburguesa("Krusty Mega balde de Pollo", 140.00, ['Pollo', 'Queso',
+'Aderezo'], 4)
+new Hamburguesa("Super Krusty", 150.00, ['Carne', 'Queso', 'huevo'], 5)
+new Hamburguesa("Super Krusty Doble", 180.00, ['Carne', 'Queso', 'huevo'], 6)
+new Hamburguesa("Super Krusty Triple", 205.00, ['Carne', 'Queso', 'huevo'], 7)
+new Hamburguesa("Krusty Vegan", 125.00, ['Espinaca', 'Soja'], 8)
+new Hamburguesa("Alitas de algo", 125.00, ['Espinaca', 'Soja'], 8)
 
 console.table(hamburguesas)
 
-const encontrarHamburguesa = hamburguesas.filter(hamb=>{
-  return hamb.precio >200
-})
-
-if(encontrarHamburguesa.length>0){
-  console.table(encontrarHamburguesa)
-} else {
-  console.warn("no se han encontrado productos coincidentes.")
+function buscarNombreCombo(palabra){
+  const encontrado = hamburguesas.find(hamburguesa=>{
+    const combo = hamburguesa.nombre.toLowerCase()
+    const bool = combo.includes(palabra.toLowerCase())
+    return bool
+  })
+  if(encontrado){
+    alert(`El combo encontrado es: ${encontrado.nombre}`)
+    console.log(encontrado.nombre)
+    return encontrado.nombre
+  } else {
+    console.warn("No existe un combo con dicha palabra en su nombre.")
+  }
 }
 
-const resultadoaumento = hamburguesas.map(hamb=>{
-  const hambTemp = JSON.parse(JSON.stringify(hamb))
-  hambTemp.precio = hambTemp.precio * 1.11
-  hambTemp.precio = hambTemp.precio.toFixed(2)
-  hambTemp.precio = parseFloat(hambTemp.precio)
-  return hambTemp
-})
+const resultadoalitas = buscarNombreCombo("alitas")
 
-console.table(resultadoaumento)
-
-const carrito = []
-
-const agregarCarrito = (nroCombo)=>{
-  carrito.push(hamburguesas.find((h=>{
-    console.log(h)
-    console.log(nroCombo)
-    return h.numeroDeCombo ===  nroCombo
-  })))
-}
-
-agregarCarrito(3)
-agregarCarrito(7)
-agregarCarrito(8)
-
-console.table(carrito)
+console.log(resultadoalitas)

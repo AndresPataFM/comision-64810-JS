@@ -17,7 +17,7 @@ Crear un buscador que consuma un array de productos en el cual se puede buscar c
 * precio
 * stock
 * descripción
-y que lso resultados s puedan ordenar de:
+y que los resultados se puedan ordenar de:
 * mayor precio
 * menor precio
 * A->z nombre | id
