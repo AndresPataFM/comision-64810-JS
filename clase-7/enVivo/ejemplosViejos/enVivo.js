@@ -161,30 +161,3 @@ let prod = {a:1, b:2}
 // 🔶 Eventos 🔶
 
 // ============
-
-// const gato = {
-//     nombre: "Sacarías"
-// }
-// console.log(gato)
-// gato.nombre = "Pepe"
-// console.log(gato)
-
-/* encontrame.onclick = ()=>{
-    alert("Que tocas")
-}
-
-
-encontrame.onclick = ()=>{
-    alert("Dije que no me toques")
-} */
-
-/* encontrame.addEventListener("click", ()=>{
-    alert("Que tocas")
-})
-encontrame.addEventListener("click", ()=>{
-    alert("Dije que no me toques")
-}) */
-
-const btnDeberes = document.querySelector("#btnDeberes")
-
-btnDeberes.addEventListener("click", agregarDeberes)

@@ -31,6 +31,7 @@ _Se simula un flujo de trabajo en términos de entrada,proceso y salida. La func
 
 ### Interactividad
 _Se capturan una o más entradas ingresadas por el usuario con prompt(). Se efectúan una o más salidas con alert() o console.log(). Las salidas son coherentes en relación a los datos ingresados._
+(El texto de coder tiene error)
 * Uso correcto del DOM
   * NO SE UTILIZAN EVENTOS MEDIANTE ATRIBUTO HTML SEA DESDE EL LADO DEL HTML O DEL JS
 * Se penaliza el uso de: alert, prompt, confirm, console.log/table (esta perfecto usar console para testear pero nunca tiene que estar en la versión entregada)
