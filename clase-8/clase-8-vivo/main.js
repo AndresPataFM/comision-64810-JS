@@ -89,13 +89,18 @@ function mostrarPokemons(arrayPokemon){
 // )
 
 async function cargarPokemon(){
-  // promesa inicial
-  const datosJSON = await fetch(url)
-  // promesa para cambiar a json
-  const datos = await datosJSON.json()
-  // agarro lo que uso de los resultados
-  const listaPoke = datos.results
-  mostrarPokemons(listaPoke)
+  try{
+    // promesa inicial
+    const datosJSON = await fetch(url)
+    // promesa para cambiar a json
+    const datos = await datosJSON.json()
+    // agarro lo que uso de los resultados
+    const listaPoke = datos.results
+    mostrarPokemons(listaPoke)
+  }catch(e){
+    console.warn(e)
+    listaDOM.innerText = "ERROR"
+  }
 }
 
 cargarPokemon()

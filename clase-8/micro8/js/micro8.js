@@ -15,15 +15,15 @@ async function conseguirProductos(){
     try {
         const datosJSON = await fetch("./productos.json")
         const datos = await datosJSON.json()
-        const otrosJSON = await fetch("./productos2.json")
-        const otrosDatos = await otrosJSON.json()
+        // const otrosJSON = await fetch("./productos2.json")
+        // const otrosDatos = await otrosJSON.json()
         // console.log(datos)
         datos.forEach(element => {
             productos.push(element)
         });
-        otrosDatos.forEach(element => {
-            productos.push(element)
-        });
+        // otrosDatos.forEach(element => {
+        //     productos.push(element)
+        // });
         // prod
         productos.forEach(producto=>{
             const li = document.createElement("li")
