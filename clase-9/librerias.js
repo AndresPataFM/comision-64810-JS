@@ -24,7 +24,7 @@
 */
 // A futuro podrán:
 /* 
-◽ Descargarlo y utilizar el js como módulos apra importar lo necesario
+◽ Descargarlo y utilizar el js como módulos para importar lo necesario
 ◽ Instalarlo mediante npm
 */
 // Nota: fijense si el código necesita llamar a una función para ser funcional.

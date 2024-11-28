@@ -184,6 +184,7 @@ const producto = {
 }
 
 const mockapiURL = "https://6448556450c25337443d67bc.mockapi.io/api/products"
+
 async function postData(url = "", data = {}) {
     // Default options are marked with *
     const response = await fetch(url, {
@@ -198,6 +199,7 @@ async function postData(url = "", data = {}) {
         // referrerPolicy: "no-referrer", 
         body: JSON.stringify(data), // El mismo tipo de data declarado en el header
     });
+    console.log(response)
     return response.json(); // parsea json
 } 
 
@@ -240,7 +242,7 @@ async function putData(url = "", data = {}, id) {
     });
     return response.json(); // parsea json
 }
-// putData(mockapiURL,productosModificado, 1).then((data) => {
+// putData(mockapiURL,productosModificado, 2).then((data) => {
 //     console.log(data);
 // });
 
@@ -253,9 +255,9 @@ async function deleteData(url = "", id) {
     return response.json(); // parsea json
 }
 // El id Cambia
-// deleteData(mockapiURL, 2).then((data) => {
-//     console.log(data);
-// }); 
+deleteData(mockapiURL, 2).then((data) => {
+    console.log(data);
+}); 
 
 
 
