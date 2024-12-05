@@ -2,23 +2,23 @@
 // console.table([1,2,3,4,5])
 
 // No hay document ni herramientas relacionadas
-// alert()
+// alert("soy un alert")
 // document.createElement("div")
 
 
-// const fs = require("node:fs")
+const fs = require("node:fs")
 
 // crear
-// fs.writeFileSync("ejemplo.txt", "Hola, me crearon con node.")
+fs.writeFileSync("ejemplo.txt", "Hola, me crearon con node.")
 
 // leer
-/* fs.readFile("ejemplo.txt", "utf8", (err, data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  console.log(data);
-}); */
+// fs.readFile("ejemplo.txt", "utf8", (err, data) => {
+//   if (err) {
+//     console.error(err);
+//     return;
+//   }
+//   console.log(data);
+// });
 
 // agregar al final | apend
-// fs.appendFileSync("ejemplo.txt", " A mi me agregaron con node.")
+fs.appendFileSync("ejemplo.txt", " A mi me agregaron con node.")
